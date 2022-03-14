@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  resources :groups
-  resources :payments
-  resources :users
+  devise_for :users
+
+  root to: "users#index"
+
+  resources :groups, only: [:index, :show, :new, :create] do
+    resources :payments, only: [:new, :create]
+  end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")

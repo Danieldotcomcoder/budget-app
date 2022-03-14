@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root to: "splash#index"
 
-  resources :groups, only: [:index, :show, :new, :create] do
+  resources :groups, only: [:index, :show, :new, :create, :destroy] do
     resources :payments, only: [:new, :create]
   end
 

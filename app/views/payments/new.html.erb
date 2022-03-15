@@ -1,3 +1,4 @@
+ <%= link_to "Back", group_payments_path(@group.id) %>
 <%= form_with model: @payment, url: group_payments_path, method: :post, local: true do |form| %>
 
     <div class="mb-3 p-2">

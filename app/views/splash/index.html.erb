@@ -1,3 +1,5 @@
-<h1>Welcome to budget app</h1>
-<%= link_to "Login", new_user_session_path %>
-<%= link_to "Sign up", new_user_registration_path %>
+<h1 class="logo-text text-primary text-center shadow-inset p-3 mb-5 bg-body rounded">Danny's Budget <br> App</h1>
+<div class="btns d-grid gap-2 text-bottom mt-5 border"> 
+  <%= link_to "Login", new_user_session_path, :class => "btn btn-primary btn-block"  %> 
+  <%= link_to "Sign up", new_user_registration_path, :class => "btn btn-secondary btn-block"  %>
+</div>

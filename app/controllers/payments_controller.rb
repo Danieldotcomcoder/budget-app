@@ -4,8 +4,8 @@ class PaymentsController < ApplicationController
 
   # GET /payments or /payments.json
   def index
-    @payments = Payment.all
     @group = Group.find(params[:group_id])
+    @payments = @group.payments.all.order(created_at: :desc)
   end
 
   # GET /payments/1 or /payments/1.json
@@ -22,10 +22,11 @@ class PaymentsController < ApplicationController
   # POST /payments or /payments.json
   def create
     @payment = Payment.new(payment_params)
-
+    @payment.user_id = current_user.id
+    @payment.group_id = Group.find_by_id(params[:group_id]).id
     respond_to do |format|
       if @payment.save
-        format.html { redirect_to payment_url(@payment), notice: 'Payment was successfully created.' }
+        format.html { redirect_to group_payments_path(@payment.group_id), notice: 'Payment was successfully created.' }
         format.json { render :show, status: :created, location: @payment }
       else
         format.html { render :new, status: :unprocessable_entity }

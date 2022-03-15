@@ -10,13 +10,13 @@ gem 'rails', '~> 7.0.2', '>= 7.0.2.3'
 gem 'sprockets-rails'
 
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 1.1'
 gem 'bootstrap', '~> 4.4.1'
-gem 'jquery-rails'
 gem 'devise'
+gem 'jquery-rails'
+gem 'pg', '~> 1.1'
 # Use the Puma web server [https://github.com/puma/puma]
-gem 'puma', '~> 5.0'
 gem 'cancancan'
+gem 'puma', '~> 5.0'
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
 

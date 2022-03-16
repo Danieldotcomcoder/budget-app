@@ -16,7 +16,20 @@
  @import "bootstrap";
 
  .btns {
-     position: relative;
-     top: 200px;
+     margin-top: 70%;
  }
 
+.battery {
+    position: relative;
+    left: 85%;
+}
+
+.reception {
+    margin-left: 1%;
+}
+
+.main-logo {
+    margin-top: 30%;
+    font-size: 3rem;
+    font-style: italic;
+}

@@ -36,14 +36,12 @@ Install gems with:
 ```
 bundle install
 ```
-
 Setup database with:
 
 ```
 rails db:create
 rails db:migrate
 ```
-
 ### Usage
 
 Start server with:

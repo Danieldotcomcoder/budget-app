@@ -11,9 +11,12 @@
   </head>
 
   <body>
+
   <div>
   <i class="reception bi bi-reception-4" role="img" aria-label="reception" style="font-size: 1.4rem"></i>
   <i class="battery bi bi-battery-half" role="img" aria-label="battery" style="font-size: 1.4rem"></i>
+  
+
   </div>
    <% if notice %>
       <h4 class="notice"><%= notice %></h4>
@@ -22,7 +25,7 @@
       <h4 class="alert"><%= alert %></h4>
     <% end %>
       <% if user_signed_in? %>
-        <%= button_to "Logout", destroy_user_session_path, method: :delete, :class => 'btn btn-light' %>
+        <%= button_to "Logout", destroy_user_session_path, method: :delete, :class => 'logout-btn btn btn-light' %>
       <% end %>
     <%= yield %>
   </body>

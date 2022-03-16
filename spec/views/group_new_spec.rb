@@ -28,8 +28,8 @@ RSpec.describe 'group', type: :feature do
     end
 
     it 'Add category page has the right fields' do
-        expect(page).to have_field('group[name]')
-        expect(page).to have_field('group[icon]')
-      end
+      expect(page).to have_field('group[name]')
+      expect(page).to have_field('group[icon]')
+    end
   end
 end

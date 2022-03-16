@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Group, type: :model do
-  
   subject do
     @user1 = User.new(name: 'Danny')
   end
@@ -17,5 +16,4 @@ RSpec.describe Group, type: :model do
     subject.name = 'hagdlihaygvdjashvgdajksyhdgvaiyhsgvdaisyhgvd;adadvkahda'
     expect(subject).to_not be_valid
   end
-
 end

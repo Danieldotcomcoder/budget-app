@@ -8,8 +8,8 @@ RSpec.describe 'group', type: :feature do
                             email: 'dan@gmail.com',
                             password: '1234567',
                             password_confirmation: '1234567')
-     
-     @group = Group.create!(name: 'category1', icon: 'test.png', user_id: @danny.id)
+
+      @group = Group.create!(name: 'category1', icon: 'test.png', user_id: @danny.id)
       within('#new_user') do
         fill_in 'Email', with: 'dan@gmail.com'
         fill_in 'Password', with: '1234567'
@@ -20,16 +20,16 @@ RSpec.describe 'group', type: :feature do
       expect(page).to have_current_path group_payments_path(@group.id)
     end
 
-   it 'transactions page have the right content' do
-        expect(page).to have_content('Transactions')
-        expect(page).to have_content('Total spent:')
-        expect(page).to have_content('Back')
-        expect(page).to have_content('Add transaction')
-      end
+    it 'transactions page have the right content' do
+      expect(page).to have_content('Transactions')
+      expect(page).to have_content('Total spent:')
+      expect(page).to have_content('Back')
+      expect(page).to have_content('Add transaction')
+    end
 
-    it "clicking on Add transaction will go to add transaction page" do
-        click_link 'Add transaction'
-        expect(page).to have_current_path new_group_payment_path(@group.id)
+    it 'clicking on Add transaction will go to add transaction page' do
+      click_link 'Add transaction'
+      expect(page).to have_current_path new_group_payment_path(@group.id)
     end
   end
 end

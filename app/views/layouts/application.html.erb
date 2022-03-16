@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BudgetApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+  <div>
+  <i class="reception bi bi-reception-4" role="img" aria-label="reception" style="font-size: 1.4rem"></i>
+  <i class="battery bi bi-battery-half" role="img" aria-label="battery" style="font-size: 1.4rem"></i>
+  </div>
+   <% if notice %>
+      <h4 class="notice"><%= notice %></h4>
+    <% end %>
+    <% if alert %>
+      <h4 class="alert"><%= alert %></h4>
+    <% end %>
+      <% if user_signed_in? %>
+        <%= button_to "Logout", destroy_user_session_path, method: :delete, :class => 'logout-btn btn btn-light' %>
+      <% end %>
+    <%= yield %>
+  </body>
+</html>

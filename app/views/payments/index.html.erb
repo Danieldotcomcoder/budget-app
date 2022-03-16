@@ -1,0 +1,27 @@
+ 
+<i class="list-icon bi-list" role="img" aria-label="battery" style="font-size: 2.2rem"></i>
+<i class="search-icon bi-search" role="img" aria-label="battery" style="font-size: 1.7rem"></i>
+<%= link_to "Back", groups_path %>  
+  <h1 class="brand-text text-primary px-2 text-center border shadow-lg">Transactions</h1>
+<div class="p-2 text-center shadow-md">
+  <h4>Total spent: <%= @group.total_payments %> $</h4>
+</div>
+
+
+<% @payments.each do |transaction| %>
+  <div class="p-2">
+    <div class="card p-2 bg-light">
+      <div class="card-body">
+        <h5 class="card-title"><%= transaction.name %></h5>
+        <p class="card-text"><%= transaction.amount %>$</p>
+        <p class="card-text"><small class="text-muted"><%= transaction.created_at %></small></p>
+      </div>
+    </div>
+  </div>
+<% end %>
+
+<div class="p-2 text-center">
+  <%= link_to "Add transaction", new_group_payment_path(@group.id), :class => "btn btn-primary" %>
+</div>
+
+

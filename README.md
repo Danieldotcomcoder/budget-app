@@ -18,7 +18,11 @@ cd budget-app
 
 ## live version
 
-[link]()
+[Live Demo](https://young-inlet-50485.herokuapp.com/)
+
+## Description video
+
+-[Description Video](https://www.loom.com/share/8600926b8da84fc1aba2c8c6cdbdc689)
 ### Prerequisites
 
 Ruby

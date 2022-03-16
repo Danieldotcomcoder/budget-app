@@ -13,10 +13,11 @@
  *= require_tree .
  *= require_self
  */
+
  @import "bootstrap";
 
  .btns {
-     margin-top: 70%;
+     margin-top: 65%;
  }
 
 .battery {
@@ -29,7 +30,7 @@
 }
 
 .main-logo {
-    margin-top: 30%;
+    margin-top: 25%;
     font-size: 3rem;
     font-style: italic;
 }
@@ -46,3 +47,4 @@
 .list-icon {
     margin-left: 0%;
 }
+
